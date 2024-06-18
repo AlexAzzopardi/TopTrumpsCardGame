@@ -20,18 +20,20 @@ public class Main {
         Card brazil = new Card("Brazil", 85, 45, 35, 95, 100);
         Card turkey = new Card("Turkey", 70, 30, 75, 35, 75);
 
-        List<Card> cardArray = new ArrayList<>();
-        cardArray.add(usa);
-        cardArray.add(france);
-        cardArray.add(germany);
-        cardArray.add(britain);
-        cardArray.add(russia);
-        cardArray.add(china);
-        cardArray.add(japan);
-        cardArray.add(india);
-        cardArray.add(brazil);
-        cardArray.add(turkey);
-        Deck deck1 = new Deck(cardArray);
+        List<Card> cardArray1 = new ArrayList<>();
+        List<Card> cardArray2 = new ArrayList<>();
+        cardArray1.add(usa);
+        cardArray1.add(france);
+        cardArray1.add(germany);
+        cardArray1.add(britain);
+        cardArray1.add(russia);
+        cardArray2.add(china);
+        cardArray2.add(japan);
+        cardArray2.add(india);
+        cardArray2.add(brazil);
+        cardArray2.add(turkey);
+        Deck deck1 = new Deck(cardArray1);
+        Deck deck2 = new Deck(cardArray2);
 
     }
 }
