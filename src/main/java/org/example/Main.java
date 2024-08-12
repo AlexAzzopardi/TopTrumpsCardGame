@@ -1,12 +1,10 @@
 package org.example;
 
+import org.example.gameplay.HumanVsComputerGame;
 import org.example.objects.Card;
 import org.example.objects.Deck;
 
-import java.util.Collections;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,9 +27,9 @@ public class Main {
         LinkedList<Card> cardLinkedList1 = new LinkedList<>(allCards.subList(0, deckSize/2));
         LinkedList<Card> cardLinkedList2 = new LinkedList<>(allCards.subList(deckSize/2, deckSize));
 
-        Deck deck1 = new Deck(cardLinkedList1);
-        Deck deck2 = new Deck(cardLinkedList2);
-        deck1.ShowCards();
-        deck2.ShowCards();
+        Deck deckPlayer = new Deck("  Player: ", cardLinkedList1);
+        Deck deckComputer = new Deck("Computer: ", cardLinkedList2);
+
+        HumanVsComputerGame.Play(deckPlayer, deckComputer);
     }
 }
